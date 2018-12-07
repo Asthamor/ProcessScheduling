@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="777.0" text="Simulación de Planificación de procesos" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoso.PrincipalController">
+   <content>
+      <AnchorPane prefHeight="586.0" prefWidth="985.0" style="-fx-background-color: #471016;">
+         <children>
+            <Label fx:id="lbl_proex" layoutX="264.0" layoutY="171.0" text="Escoja un algoritmo para planificar procesos" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_fcfs" layoutX="264.0" layoutY="243.0" onAction="#goFCFS" style="-fx-background-color: #69202f;" text="First-Come, First-Served" textFill="WHITE" />
+            <JFXButton fx:id="btn_rr" layoutX="465.0" layoutY="243.0" onAction="#goRR" style="-fx-background-color: #69202f;" text="Round-Robin" textFill="WHITE" />
+            <Label layoutX="49.0" layoutY="431.0" text="Sistemas Operativos" textFill="WHITE" />
+            <Label layoutX="551.0" layoutY="431.0" text="Mauricio Torres Osorio, Diana Antonio Gómez" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </content>
+   <font>
+      <Font size="15.0" />
+   </font>
+</TitledPane>

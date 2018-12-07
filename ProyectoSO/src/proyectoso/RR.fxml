@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="1235.0" text="Simulación de Planificación Round Robin" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoso.RRController">
+   <content>
+      <AnchorPane prefHeight="586.0" prefWidth="985.0" style="-fx-background-color: #471016;">
+         <children>
+            <ProgressBar fx:id="pgrb_progress" layoutX="681.0" layoutY="152.0" prefHeight="18.0" prefWidth="215.0" progress="0.0" />
+            <Label fx:id="lbl_proex" layoutX="681.0" layoutY="88.0" text="Proceso en ejecución:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_processid" layoutX="831.0" layoutY="88.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_start" layoutX="692.0" layoutY="214.0" onAction="#initSimulation" style="-fx-background-color: #69202f;" text="Comenzar" textFill="WHITE" />
+            <JFXButton fx:id="btn_stop" layoutX="822.0" layoutY="214.0" onAction="#stopSimulation" style="-fx-background-color: #69202f;" text="Detener" textFill="WHITE" />
+            <TableView fx:id="tbl_readyqueue" layoutX="361.0" layoutY="14.0" prefHeight="554.0" prefWidth="287.0">
+              <columns>
+                <TableColumn fx:id="rq_process" prefWidth="110.0" text="Procesos listos" />
+                  <TableColumn fx:id="rq_time" prefWidth="73.0" text="Tiempo" />
+                  <TableColumn fx:id="rq_size" prefWidth="103.0" text="Tamaño" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tbl_donequeue" layoutX="922.0" layoutY="16.0" prefHeight="547.0" prefWidth="285.0">
+               <columns>
+                  <TableColumn fx:id="dq_process" prefWidth="149.0" text="Procesos finalizados" />
+                  <TableColumn fx:id="dq_time" prefWidth="63.0" text="Tiempo" />
+                  <TableColumn fx:id="dq_size" prefWidth="72.0" text="Tamaño" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tbl_waitingqueue" layoutX="25.0" layoutY="14.0" prefHeight="548.0" prefWidth="306.0">
+              <columns>
+                <TableColumn fx:id="wq_process" prefWidth="150.0" text="Procesos en espera" />
+                  <TableColumn fx:id="wq_time" prefWidth="77.0" text="Tiempo" />
+                  <TableColumn fx:id="wq_size" prefWidth="78.0" text="Tamaño" />
+              </columns>
+            </TableView>
+            <Label layoutX="729.0" layoutY="310.0" text="Uso de memoria" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="pgrb_ram_usage" layoutX="686.0" layoutY="359.0" prefHeight="23.0" prefWidth="206.0" progress="0.0" />
+            <Label layoutX="729.0" fx:id="mem_use" layoutY="379.0" text="" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+   <font>
+      <Font size="15.0" />
+   </font>
+</TitledPane>
